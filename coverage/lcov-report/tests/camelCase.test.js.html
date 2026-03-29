@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/clamp.js</title>
+    <title>Code coverage report for tests/camelCase.test.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> clamp.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">tests</a> camelCase.test.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">95.45% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>31/31</span>
+                <span class='fraction'>21/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.14% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/7</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">95.45% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>31/31</span>
+                <span class='fraction'>21/22</span>
             </div>
         
             
@@ -84,17 +84,7 @@
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -111,52 +101,32 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * Clamps `number` within the inclusive `lower` and `upper` bounds.
- *
- * @since 4.0.0
- * @category Number
- * @param {number} number The number to clamp.
- * @param {number} lower The lower bound.
- * @param {number} upper The upper bound.
- * @returns {number} Returns the clamped number.
- * @example
- *
- * clamp(-10, -5, 5)
- * // =&gt; -5
- *
- * clamp(10, -5, 5)
- * // =&gt; 5
- */
-function clamp(number, lower, upper) {
-  number = +number
-  lower = +lower
-  upper = +upper
-  lower = lower === lower ? lower <span class="branch-0 cbranch-no" title="branch not covered" >: 0</span>
-  upper = upper === upper ? upper : 0
-  if (number === number) {
-    number = number &gt;= upper <span class="branch-0 cbranch-no" title="branch not covered" >? number </span>: upper
-    number = number &lt;= lower <span class="branch-0 cbranch-no" title="branch not covered" >? number </span>: lower
-  }
-  return number
-}
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">// Tests for ../src/camelCase.js
+// 29.03.2026 - DD/MM/YYYY
+// Author: Niko Sukari
 &nbsp;
-export default clamp
-&nbsp;</pre></td></tr></table></pre>
+// Import dependency: Chai Assertion Library's expect style.
+// Import module to be tested.
+import { expect } from "chai";
+import camelCase from "../src/camelCase.js";
+&nbsp;
+&nbsp;
+// Test if camelCase(string) function returns camel case as expected.
+&nbsp;
+// ##################################
+// Test is being skipped due failure.
+// ##################################
+&nbsp;
+// camelCase("Foo Bar") returns " fooBar" instead of "fooBar".
+describe("camelCase()", () =&gt; {
+    it.skip("Camel cases the given string", () =&gt; {
+<span class="cstat-no" title="statement not covered" >        expect(camelCase("FOO BAR")).to.equal('fooBar')</span>
+    });
+});</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha tests --recursive",
-    "coverage": "c8 --reporter=lcov --reporter=text mocha tests --recursive"
+    "coverage": "c8 --reporter=lcov --reporter=text --exclude=src/.internal/** --exclude=tests/** mocha tests --recursive"
   },
   "author": "",
   "license": "MIT",
